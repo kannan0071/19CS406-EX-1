@@ -27,7 +27,8 @@ Client:
 7. Stop
 
 ##PROGRAM :
-##CLIENT :
+CLIENT :
+```
 import socket
 from datetime import datetime
 s=socket.socket()
@@ -41,15 +42,16 @@ ack=c.recv(1024).decode()
 if ack:
     print(ack)
 c.close()
-
-##SERVER :
+```
+SERVER :
+```
 import socket
 s=socket.socket()
 s.connect(('localhost',8000))
 print(s.getsockname())
 print(s.recv(1024).decode())
 s.send("acknowledgement recived from the server".encode())
-
+```
 ##OUTPUT:
 ![STUDY OF SOCKET PROGRAMMING WITH CLIENT-SERVER MODEL](https://github.com/kannan0071/19CS406-EX-1/assets/119641638/ca9fb508-e605-4042-a02c-7f5800e40d6c)
 
