@@ -3,11 +3,13 @@
 #DATE :09-03-2023
 
 #AIM : 
+  
   To implement socket programming date and time display from client to server using TCPSockets
 
 #ALGORITHM :
 
 Server:
+
 1. Create a server socket and bind it to port.
 2. Listen for new connection and when a connection arrives, accept it.
 3. Send server‟s date and time to the client.
@@ -19,6 +21,7 @@ Server:
 9. Stop.
 
 Client:
+
 1. Create a client socket and connect it to the server‟s port number.
 2. Retrieve its own IP address using built-in function.
 3. Send its address to the server.
@@ -28,6 +31,7 @@ Client:
 7. Stop
 
 #PROGRAM :
+
 CLIENT :
 ```
 import socket
@@ -45,6 +49,7 @@ if ack:
 c.close()
 ```
 SERVER :
+
 ```
 import socket
 s=socket.socket()
@@ -53,6 +58,7 @@ print(s.getsockname())
 print(s.recv(1024).decode())
 s.send("acknowledgement recived from the server".encode())
 ```
+
 #OUTPUT:
 ![STUDY OF SOCKET PROGRAMMING WITH CLIENT-SERVER MODEL](https://github.com/kannan0071/19CS406-EX-1/assets/119641638/ca9fb508-e605-4042-a02c-7f5800e40d6c)
 
